@@ -36,14 +36,14 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "glimmer/rule-name": 2
+        "glimmer/no-side-effects-in-tracking-getters": 2
     }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
+* [`no-side-effects-in-tracking-getters`](docs/rules/no-side-effects-in-tracking-getters.md)
 
 ## Contribution guide
 
