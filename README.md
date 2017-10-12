@@ -45,7 +45,14 @@ Then configure the rules you want to use under the rules section.
 
 * Fill in provided rules here
 
+## Contribution guide
 
+In order to add a new rule, you should:
+- Create issue on GH with description of proposed rule
+- Generate a new rule using the [official yeoman generator](https://github.com/eslint/generator-eslint)
+- Write test scenarios & implement logic
+- Describe the rule in the generated `docs` file
+- Make sure all tests are passing
+- Create PR and link created issue in description
 
-
-
+If you have any suggestions, ideas or problems feel free to add new [issue](https://github.com/bardzusny/eslint-plugin-glimmer/issues), but first please make sure your question does not repeat previous ones.
