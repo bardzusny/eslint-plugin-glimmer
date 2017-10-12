@@ -19,7 +19,6 @@ var rule = require("../../../lib/rules/no-side-effects-in-tracking-getters"),
 
 var ruleTester = new RuleTester();
 ruleTester.run("no-side-effects-in-tracking-getters", rule, {
-
     valid: [
         {
             code: `
@@ -46,7 +45,6 @@ ruleTester.run("no-side-effects-in-tracking-getters", rule, {
             parser: 'typescript-eslint-parser',
         }
     ],
-
     invalid: [
         {
             code: `
