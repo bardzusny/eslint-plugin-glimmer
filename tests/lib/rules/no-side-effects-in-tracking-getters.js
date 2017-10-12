@@ -43,7 +43,20 @@ ruleTester.run("no-side-effects-in-tracking-getters", rule, {
               }
             `,
             parser: 'typescript-eslint-parser',
-        }
+        },
+        {
+            code: `
+              export default class MyName extends Component {
+                @tracked('args.number')
+                get numberPlusOne() {
+                  globalNumberPlusOne = this.args.number + 1;
+                  return globalNumberPlusOne;
+                }
+              }
+            `,
+            parser: 'typescript-eslint-parser',
+        },
+
     ],
     invalid: [
         {
