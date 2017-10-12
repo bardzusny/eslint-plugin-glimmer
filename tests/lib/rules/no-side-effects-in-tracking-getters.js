@@ -65,6 +65,42 @@ ruleTester.run("no-side-effects-in-tracking-getters", rule, {
                 message: "Side effect in tracked getter property detected.",
                 line: 7,
             }]
+        },
+        {
+            code: `
+              export default class MyName extends Component {
+                numberPlusOneProperty: number
+
+                @tracked('args.number')
+                get numberPlusOne() {
+                  this.args.number += 1;
+                  return this.args.number;
+                }
+              }
+            `,
+            parser: 'typescript-eslint-parser',
+            errors: [{
+                message: "Side effect in tracked getter property detected.",
+                line: 7,
+            }]
+        },
+        {
+            code: `
+              export default class MyName extends Component {
+                numberPlusOneProperty: number
+
+                @tracked('args.number')
+                get numberPlusOne() {
+                  this.args.number -= 1;
+                  return this.args.number;
+                }
+              }
+            `,
+            parser: 'typescript-eslint-parser',
+            errors: [{
+                message: "Side effect in tracked getter property detected.",
+                line: 7,
+            }]
         }
     ]
 });
