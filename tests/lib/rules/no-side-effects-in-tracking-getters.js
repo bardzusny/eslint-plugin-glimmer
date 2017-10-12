@@ -73,7 +73,7 @@ ruleTester.run("no-side-effects-in-tracking-getters", rule, {
             `,
             parser: 'typescript-eslint-parser',
             errors: [{
-                message: "Side effect in tracking getter property detected.",
+                message: "Side effect in tracking getter property",
                 line: 7,
             }]
         },
@@ -91,7 +91,7 @@ ruleTester.run("no-side-effects-in-tracking-getters", rule, {
             `,
             parser: 'typescript-eslint-parser',
             errors: [{
-                message: "Side effect in tracking getter property detected.",
+                message: "Side effect in tracking getter property",
                 line: 7,
             }]
         },
@@ -109,7 +109,7 @@ ruleTester.run("no-side-effects-in-tracking-getters", rule, {
             `,
             parser: 'typescript-eslint-parser',
             errors: [{
-                message: "Side effect in tracking getter property detected.",
+                message: "Side effect in tracking getter property",
                 line: 7,
             }]
         }
