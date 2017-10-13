@@ -36,7 +36,8 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "glimmer/no-side-effects-in-tracking-getters": 2
+        "glimmer/no-side-effects-in-tracking-getters": 2,
+        "glimmer/require-init-in-constructor": 2
     }
 }
 ```
@@ -44,6 +45,7 @@ Then configure the rules you want to use under the rules section.
 ## Supported Rules
 
 * [`no-side-effects-in-tracking-getters`](docs/rules/no-side-effects-in-tracking-getters.md)
+* [`require-super-in-constructor`](docs/rules/require-super-in-constructor.md)
 
 ## Contribution guide
 
